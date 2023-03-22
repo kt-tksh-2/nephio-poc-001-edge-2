@@ -9,5 +9,5 @@ metadata: # kpt-merge: /cluster-context
 spec:
   cniConfig:
     cniType: macvlan
-    masterInterface: ens4
+    masterInterface: ens1
   siteCode: edge-2
