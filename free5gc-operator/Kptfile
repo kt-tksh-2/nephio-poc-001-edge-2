@@ -1,0 +1,23 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /free5gc-operator
+  name: free5gc-operator
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: kpt.dev|Kptfile|default|free5gc-operator
+upstream:
+  type: git
+  git:
+    repo: https://github.com/kt-tksh-2/nephio-poc-001-catalog.git
+    directory: free5gc-operator
+    ref: free5gc-operator/v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/kt-tksh-2/nephio-poc-001-catalog.git
+    directory: free5gc-operator
+    ref: free5gc-operator/v1
+    commit: 9c9367ad059ea527ef19f1abcc149fa57d583ca7
+info:
+  description: Operator package for free5gc Nephio integration
+status: {}
